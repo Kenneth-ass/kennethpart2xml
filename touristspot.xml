@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tourist_spot>
+  <philippines type="Palawan Undergroun River">
+    <location model="Location">
+      <island>Palawan</island>
+      <province>Puerto Princesa</province>
+      <region>MIMAROPA</region>
+  </location>
+  <description model="Description">
+    <descriptions>The Puerto Princesa Underground River is a UNESCO World Heritage Site and one of the New 7 Wonders of Nature. Visitors can take a guided boat tour through the river, which winds its way through a limestone cave system. The river is also home to a variety of wildlife, including bats and monkeys.</descriptions>
+  </description>
+  <activities model="Activities">
+    <activity>Hiking</activity>
+    <activity>Cave Exploration</activity>
+    <activity>Boat Tour</activity>
+    <activity>Wildlife Watching</activity>
+  </activities>
+  <best_time_to_visit model="Best Time to Visit">
+    <month>December</month>
+    <month>January</month>
+    <month>February</month>
+    <month>March</month>
+  </best_time_to_visit>
+  <nearest_airport model="Nearest Airport">
+    <name>Puerto Princesa International Airport</name>
+    <distance>50 km</distance>
+  </nearest_airport>
+  <accommodations model="Accommodations"></accommodations>
+  <hotel model="Hotel">
+      <name>Sheridan Beach Resort and Spa</name>
+      <rating>4 stars</rating>
+      <price_range>PHP 7,000 - PHP 14,000 per night</price_range>
+    </hotel>
+    <hotel model="Hotel">
+      <name>Princesa Garden Island Resort and Spa</name>
+      <rating>5 stars</rating>
+      <price_range>PHP 9,000 - PHP 18,000 per night</price_range>
+    </hotel>
+    <guesthouse model="Guesthouse">
+      <name>Mikee Pension</name>
+      <rating>3 stars</rating>
+      <price_range>PHP 1,500 - PHP 2,500 per night</price_range>
+    </guesthouse>
+  </philippines>
+  
+  <international type="Eiffel Tower">
+    <location model="Location">
+      <city>Paris</city>
+      <country>France</country>
+  </location>
+  <descriptions model="Description">
+    <description>The Eiffel Tower is one of the most iconic landmarks in Paris and a symbol of France. Standing at 324 meters tall, it is the tallest structure in Paris and attracts millions of visitors every year. Visitors can take the elevator or stairs to the top for a breathtaking view of the city.</description>
+  </descriptions>
+  <activities model="Activities">
+    <activity>Sightseeing</activity>
+    <activity>Photography</activity>
+    <activity>Dining</activity>
+    <activity>Shopping</activity>
+  </activities>
+  <best_time_to_visit model="Best Time to Visit">
+    <month>April</month>
+    <month>May</month>
+    <month>September</month>
+    <month>October</month>
+  </best_time_to_visit>
+  <nearest_airport model="Nearest Airport">
+    <name>Charles de Gaulle Airport</name>
+    <distance>35 km</distance>
+  </nearest_airport>
+  <accommodations model="Accommodations"></accommodations>
+   <hotel model="Hotel">
+      <name>Hotel Plaza Athenee</name>
+      <rating>5 stars</rating>
+      <price_range>€700 - €2,500 per night</price_range>
+    </hotel>
+    <hotel model="Hotel">
+      <name>Le Bristol Paris</name>
+      <rating>5 stars</rating>
+      <price_range>€700 - €1,800 per night</price_range>
+    </hotel>
+    <guesthouse model="Guesthouse" >
+      <name>Hotel Chopin</name>
+      <rating>3 stars</rating>
+      <price_range>€100 - €300 per night</price_range>
+    </guesthouse>
+  </international>
+</tourist_spot>

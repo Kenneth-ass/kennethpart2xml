@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computers</title>
+</head>
+<body>
+    <h2>Computers</h2>
+    <button type="button" onclick="loadXMLDoc()">Computers</button>
+    <hr>
+
+    <div id="parsing">
+        
+    </div>
+
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    createList(this);
+                }
+            };
+            xmlhttp.open("GET", "touristspot.xml", true);
+            xmlhttp.send();
+        }
+        
+        function createList(xml) {
+            var i, j, k,  xmlDoc, txt;
+            
+            // Actual XML File Object mode
+            xmlDoc = xml.responseXML; 
+
+            var tourist_spot = xmlDoc.getElementsByTagName('tourist_spot')[0];
+
+            txt='';
+            
+            for (i = 0; i < tourist_spot.children.length; i++) {
+                txt += `<h1>${tourist_spot.children[i].getAttribute('type')}</h1>`;
+                for (j = 0; j < tourist_spot.children[i].children.length; j++) {
+                    txt += 
+                    `
+                    <ul>
+                        <li><h3>${tourist_spot.children[i].children[j].getAttribute('model')}</h3>
+                    
+                    `;
+                    for (k = 0; k < tourist_spot.children[i].children[j].children.length; k++) {
+                        txt += 
+                        `
+                                <ul>
+                                    <li>${tourist_spot.children[i].children[j].children[k].tagName} - ${tourist_spot.children[i].children[j].children[k].childNodes[0].nodeValue}</li>
+                                </ul>
+                        `;
+                        }
+                        txt += 
+                    `    
+                            </li>
+                        </ul>
+                        
+                    `;
+                } 
+
+            document.getElementById("parsing").innerHTML = txt;
+        }
+    }
+    </script>
+</body>
+</html>
